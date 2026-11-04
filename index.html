@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>خوشلي — فيصل الخالدي</title>
+<meta name="description" content="خوشلي — فيصل الخالدي. حساباته على انستقرام وتيك توك وسناب شات ويوتيوب، وواتساب للإعلانات والتعاون.">
+<meta name="theme-color" content="#D6EBEE">
+<link rel="canonical" href="https://jelever.github.io/khoshly/">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="خوشلي">
+<meta property="og:title" content="خوشلي — فيصل الخالدي">
+<meta property="og:description" content="حسابات خوشلي على انستقرام وتيك توك وسناب شات ويوتيوب، وواتساب للإعلانات والتعاون.">
+<meta property="og:url" content="https://jelever.github.io/khoshly/">
+<meta property="og:image" content="https://jelever.github.io/khoshly/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="خوشلي — فيصل الخالدي">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/thmanyah-serif-display-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/thmanyah-serif-display-500.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:"Thmanyah Serif Display";font-weight:300;font-style:normal;font-display:swap;src:url(assets/fonts/thmanyah-serif-display-300.woff2) format("woff2")}
+  @font-face{font-family:"Thmanyah Serif Display";font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/thmanyah-serif-display-400.woff2) format("woff2")}
+  @font-face{font-family:"Thmanyah Serif Display";font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/thmanyah-serif-display-500.woff2) format("woff2")}
+  @font-face{font-family:"Thmanyah Serif Display";font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/thmanyah-serif-display-700.woff2) format("woff2")}
+  @font-face{font-family:"Thmanyah Serif Display";font-weight:900;font-style:normal;font-display:swap;src:url(assets/fonts/thmanyah-serif-display-900.woff2) format("woff2")}
+
+  /* Layout: the خوشلي wordmark opens the page · big platform tiles · sponsors marquee · motif pattern behind the foot */
+  /* Khouchly V3 palette only: violet 4113AE · coral E56157 · cream FCECD4 · beige D6BA9A — one deliberate look in light and dark */
+  :root{
+    --violet:#4113AE;
+    --coral:#E56157;
+    --cream:#FCECD4;
+    --beige:#D6BA9A;
+    --sky:#D6EBEE;
+    --ui:"Thmanyah Serif Display","Noto Naskh Arabic",-apple-system,"Segoe UI",Tahoma,sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--cream);scroll-padding-top:env(safe-area-inset-top,0px)}
+  body{margin:0;background:var(--cream);color:var(--violet);font-family:var(--ui);font-size:14px;-webkit-tap-highlight-color:transparent}
+  img{max-width:100%}
+  .page{position:relative;overflow:hidden;min-height:100vh;
+    padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+    background:linear-gradient(180deg,var(--sky) 0%,var(--sky) 22%,#e6ece4 58%,var(--cream) 82%)}
+  .wrap{position:relative;z-index:1;max-width:460px;margin:0 auto;
+    padding-left:max(16px,env(safe-area-inset-left,0px));
+    padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+  /* hero */
+  .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding-block:26px 4px}
+  .hero h1{margin:0;line-height:0}
+  .hero .mark{width:min(190px,50vw);height:auto;display:block;animation:settle 1s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes settle{from{transform:scale(.94);opacity:.3}to{transform:none;opacity:1}}
+
+  /* links: scattered sticker board — each platform its own size and tilt */
+  .links{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:34px;gap:10px;padding-block:16px 22px}
+  .tile{--bg:#fff;--fg:#111;--go-bg:#111;--go-fg:#fff;--r:0deg;
+    position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;min-width:0;overflow:hidden;
+    padding:10px 10px 10px 14px;border-radius:24px;background:var(--bg);color:var(--fg);text-decoration:none;
+    box-shadow:0 14px 26px -14px rgba(65,19,174,.55);transform:rotate(var(--r));
+    transition:transform .2s cubic-bezier(.2,.7,.2,1);touch-action:manipulation;
+    animation:drop .7s cubic-bezier(.2,.8,.2,1.1) both;animation-delay:var(--d,0s)}
+  .tile svg{width:34px;height:34px;display:block;flex:none}
+  .tile > span:not(.go){min-width:0;flex:1}
+  .tile b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px;font-weight:700;line-height:1.2}
+  .tile small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;font-weight:500;margin-top:2px;direction:ltr;text-align:right;opacity:.8}
+  .tile .go{position:absolute;top:7px;left:7px;width:18px;height:18px;font-size:10px;border-radius:50%;
+    display:grid;place-items:center;background:var(--go-bg);color:var(--go-fg);font-family:system-ui,sans-serif}
+  .tile:hover{transform:rotate(0deg) scale(1.03)}
+  .tile:active{transform:rotate(0deg) scale(.96)}
+  .tile:focus-visible{outline:3px solid var(--coral);outline-offset:4px}
+  @keyframes drop{from{transform:translateY(-14px) rotate(calc(var(--r) * 3));opacity:.35}to{transform:rotate(var(--r));opacity:1}}
+  /* placement (RTL: column 1 is the right edge) */
+  .tile.p-ig  {grid-column:1 / span 3;grid-row:span 2;--r:-2deg;--d:.05s}
+  .tile.p-tt  {grid-column:4 / span 3;grid-row:span 2;--r:2deg;--d:.12s;margin-top:10px;margin-bottom:-10px}
+  .tile.p-snap{grid-column:1 / span 3;grid-row:span 2;--r:2.5deg;--d:.26s}
+  .tile.p-yt  {grid-column:4 / span 3;grid-row:span 2;--r:-3deg;--d:.33s;margin-top:14px;margin-bottom:-14px}
+  .tile.p-wa  {grid-column:1 / span 6;grid-row:span 2;--r:-1.5deg;--d:.19s;margin-top:14px;margin-bottom:4px}
+  /* each platform tile wears its own platform's colour */
+  .tile svg{border-radius:11px;box-shadow:0 0 0 3px rgba(255,255,255,.95),0 6px 14px -6px rgba(0,0,0,.35)}
+  .tile.p-ig{--bg:linear-gradient(135deg,#f9c25e 0%,#f2713a 28%,#d62976 58%,#962fbf 82%,#5b5bd6 100%);--fg:#fff;--go-bg:#fff;--go-fg:#d62976}
+  .tile.p-tt{--bg:linear-gradient(135deg,#161616 0%,#000 60%,#1b1b1b 100%);--fg:#fff;--go-bg:#25f4ee;--go-fg:#000;box-shadow:inset 3px 0 0 #fe2c55,inset -3px 0 0 #25f4ee,0 10px 22px -12px rgba(0,0,0,.6)}
+  .tile.p-snap{--bg:#FFFC00;--fg:#111;--go-bg:#111;--go-fg:#FFFC00}
+  .tile.p-yt{--bg:#FF0000;--fg:#fff;--go-bg:#fff;--go-fg:#FF0000}
+  .tile.p-wa{--bg:#1DAA61;--fg:#fff;--go-bg:#fff;--go-fg:#1DAA61}
+  .tile.p-wa small{direction:rtl}
+
+  footer{position:relative;z-index:1}
+  footer .wrap{display:flex;justify-content:center;padding-block:60px 30px;font-size:12px;font-weight:700;color:var(--violet)}
+
+  /* Khoshliy motif pattern: diamond dots and brush curves taken from the wordmark, rising from the foot */
+  .page::after{content:"";position:absolute;z-index:0;left:0;right:0;bottom:0;height:min(440px,55%);pointer-events:none;
+    background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22140%22 height=%22140%22 viewBox=%220 0 140 140%22%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E %3Cpath d=%22M18 30 l8 -8 l8 8 l-8 8 z%22 fill=%22%234113AE%22/%3E %3Cpath d=%22M96 14 l5 -5 l5 5 l-5 5 z%22 fill=%22%23E56157%22/%3E %3Cpath d=%22M104 14 l5 -5 l5 5 l-5 5 z%22 fill=%22%23E56157%22/%3E %3Cpath d=%22M52 74 q14 -18 28 0 t28 0%22 stroke=%22%234113AE%22 stroke-width=%223.2%22/%3E %3Cpath d=%22M10 104 q8 -9 16 0%22 stroke=%22%23E56157%22 stroke-width=%223%22/%3E %3Ccircle cx=%22118%22 cy=%2264%22 r=%223%22 fill=%22%23D6BA9A%22/%3E %3Ccircle cx=%2238%22 cy=%2266%22 r=%222.4%22 fill=%22%234113AE%22/%3E %3Cpath d=%22M70 112 l7 -7 l7 7 l-7 7 z%22 stroke=%22%23D6BA9A%22 stroke-width=%222.6%22/%3E %3Cpath d=%22M118 118 c-6 -8 6 -12 0 -20%22 stroke=%22%234113AE%22 stroke-width=%222.6%22/%3E %3Ccircle cx=%2264%22 cy=%2226%22 r=%222.4%22 fill=%22%23D6BA9A%22/%3E %3Cpath d=%22M30 132 l4 -4 l4 4 l-4 4 z%22 fill=%22%234113AE%22/%3E %3C/g%3E%3C/svg%3E") repeat center bottom / 140px 140px;opacity:.3;
+    -webkit-mask-image:linear-gradient(transparent,#000 60%);mask-image:linear-gradient(transparent,#000 60%)}
+
+  /* sponsors marquee */
+  .sponsors{position:relative;z-index:1;margin-top:18px;padding-block:16px 18px;background:var(--violet);overflow:hidden}
+  .sp-title{margin:0 0 12px;text-align:center;font-size:14px;font-weight:700;color:var(--cream);padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+  .sp-rail{overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+  .sp-track{display:flex;gap:12px;width:max-content;margin:0;padding:0;list-style:none;animation:spRun 60s linear infinite}
+  .sponsors:hover .sp-track{animation-play-state:paused}
+  @keyframes spRun{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}
+  .sp{flex:none;display:grid;place-items:center;height:44px;padding:0 12px;border-radius:12px;background:#fff}
+  .sp img{display:block;height:28px;width:auto;max-width:96px;object-fit:contain}
+
+  /* name */
+  .about{padding-block:14px 4px}
+  .me{margin:0}
+  .me figcaption{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding-block:4px 8px}
+  .me h2{margin:0;line-height:0}
+  .me .who{width:min(230px,66vw);height:auto}
+
+  @media (prefers-reduced-motion:reduce){.sp-track{animation:none}.sp-rail{overflow-x:auto}.hero .mark,.tile{animation:none}.tile{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="wrap hero">
+  <h1><img class="mark" src="assets/img/khoshly-wordmark.webp" alt="خوشلي" width="240" height="205" fetchpriority="high"></h1>
+</header>
+
+<section class="wrap about" aria-labelledby="aboutTitle">
+  <figure class="me">
+    <figcaption>
+      <h2 id="aboutTitle"><img class="who" src="assets/img/faisal-alkhalidi.svg" alt="فيصل الخالدي" width="268" height="52"></h2>
+    </figcaption>
+  </figure>
+</section>
+
+<nav class="wrap links" aria-label="حسابات خوشلي">
+  <a class="tile p-ig" href="https://www.instagram.com/faisal_cook" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset=".85" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#ig)"/><rect x="14" y="14" width="36" height="36" rx="11" fill="none" stroke="#fff" stroke-width="4"/><circle cx="32" cy="32" r="8.5" fill="none" stroke="#fff" stroke-width="4"/><circle cx="42.5" cy="21.5" r="2.6" fill="#fff"/></svg>
+    <span><b>انستقرام</b><small>@faisal_cook</small></span>
+    <span class="go" aria-hidden="true">↖</span>
+  </a>
+
+  <a class="tile p-tt" href="https://www.tiktok.com/@fiasal_cook" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#000"/><g transform="translate(17 13)"><path d="M21 0h6.5a10 10 0 0 0 9 9.3v6.6a16 16 0 0 1-9-2.8V27a12 12 0 1 1-12-12h1.5v6.7H15.5a5.3 5.3 0 1 0 5.5 5.3z" fill="#25f4ee" transform="translate(-1.5 -1.5)"/><path d="M21 0h6.5a10 10 0 0 0 9 9.3v6.6a16 16 0 0 1-9-2.8V27a12 12 0 1 1-12-12h1.5v6.7H15.5a5.3 5.3 0 1 0 5.5 5.3z" fill="#fe2c55" transform="translate(1.5 1.5)"/><path d="M21 0h6.5a10 10 0 0 0 9 9.3v6.6a16 16 0 0 1-9-2.8V27a12 12 0 1 1-12-12h1.5v6.7H15.5a5.3 5.3 0 1 0 5.5 5.3z" fill="#fff"/></g></svg>
+    <span><b>تيك توك</b><small>@fiasal_cook</small></span>
+    <span class="go" aria-hidden="true">↖</span>
+  </a>
+
+  <a class="tile p-wa" href="https://wa.me/966556325405" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#25D366"/><path d="M32 12a19.5 19.5 0 0 0-16.8 29.4L12.5 51l10-2.6A19.5 19.5 0 1 0 32 12z" fill="#fff"/><path d="M25.5 22.5c-.5-1.1-1-1.1-1.5-1.1h-1.3c-.4 0-1.2.2-1.8.8-.6.7-2.4 2.3-2.4 5.6s2.4 6.5 2.8 7c.3.4 4.7 7.5 11.6 10.2 5.7 2.3 6.9 1.8 8.1 1.7 1.2-.1 4-1.6 4.5-3.2.6-1.6.6-3 .4-3.2-.2-.3-.6-.4-1.3-.8l-4.1-2c-.6-.2-1-.3-1.4.3l-1.9 2.4c-.4.4-.7.4-1.3.1-.6-.3-2.6-1-5-3.1a18.6 18.6 0 0 1-3.4-4.3c-.4-.6 0-.9.3-1.2l.9-1.1c.3-.4.4-.6.6-1 .2-.4.1-.8 0-1.1l-1.8-5z" fill="#25D366"/></svg>
+    <span><b>واتساب</b><small>للإعلانات والتعاون</small></span>
+    <span class="go" aria-hidden="true">↖</span>
+  </a>
+
+  <a class="tile p-snap" href="https://www.snapchat.com/@fio9y" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FFFC00"/><path d="M32 13c-7 0-12 5-12 12v6l-3.2-.6c-1.2-.2-1.8 1.4-.8 2l3.6 2c-1.3 3.6-4 6.3-7.6 7.6-.9.3-.8 1.6.1 1.9l3.6 1c.4.1.6.4.7.8l.5 2.4c.1.6.7.9 1.3.8 1.8-.4 3.7-.4 5.4.4C25.8 50.7 28.6 52 32 52s6.2-1.3 8.4-2.7c1.7-.8 3.6-.8 5.4-.4.6.1 1.2-.2 1.3-.8l.5-2.4c.1-.4.3-.7.7-.8l3.6-1c.9-.3 1-1.6.1-1.9-3.6-1.3-6.3-4-7.6-7.6l3.6-2c1-.6.4-2.2-.8-2L44 31v-6c0-7-5-12-12-12z" fill="#fff" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <span><b>سناب شات</b><small>@fio9y</small></span>
+    <span class="go" aria-hidden="true">↖</span>
+  </a>
+
+  <a class="tile p-yt" href="https://www.youtube.com/@Fiasal_CooK" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FF0000"/><rect x="11" y="18" width="42" height="28" rx="9" fill="#fff"/><path d="M28 25l11 7-11 7z" fill="#FF0000"/></svg>
+    <span><b>يوتيوب</b><small>@Fiasal_CooK</small></span>
+    <span class="go" aria-hidden="true">↖</span>
+  </a>
+</nav>
+
+<section class="sponsors" aria-labelledby="spTitle">
+  <p class="sp-title" id="spTitle">تشرّفنــا بالتعــــاون مع</p>
+  <div class="sp-rail"><ul class="sp-track">
+    <li class="sp"><img src="assets/img/sponsors/keeta.jpg" alt="كيتا" width="173" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/sun-cola.jpg" alt="سن كولا" width="116" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/tania.jpg" alt="تانيا" width="94" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/midea.jpg" alt="Midea" width="236" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/ninja.jpg" alt="Ninja" width="282" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/india-gate.jpg" alt="India Gate" width="74" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/hungerstation.jpg" alt="هنقرستيشن" width="188" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/careem.jpg" alt="كريم" width="231" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/coffee-joy.jpg" alt="كوفي جوي" width="132" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/eastern.jpg" alt="إيسترن" width="141" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/foom.jpg" alt="فوم" width="169" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/indomie.jpg" alt="إندومي" width="133" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/loacker.jpg" alt="Loacker" width="153" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/wow-pasta.jpg" alt="واو باستا" width="99" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/lurpak.jpg" alt="Lurpak" width="284" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/panda.jpg" alt="بنده" width="143" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/saudia.jpg" alt="السعودية" width="148" height="96" decoding="async"></li>
+    <!-- second copy of the same logos: the marquee loops by sliding half its width -->
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/keeta.jpg" alt="" width="173" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/sun-cola.jpg" alt="" width="116" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/tania.jpg" alt="" width="94" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/midea.jpg" alt="" width="236" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/ninja.jpg" alt="" width="282" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/india-gate.jpg" alt="" width="74" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/hungerstation.jpg" alt="" width="188" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/careem.jpg" alt="" width="231" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/coffee-joy.jpg" alt="" width="132" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/eastern.jpg" alt="" width="141" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/foom.jpg" alt="" width="169" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/indomie.jpg" alt="" width="133" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/loacker.jpg" alt="" width="153" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/wow-pasta.jpg" alt="" width="99" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/lurpak.jpg" alt="" width="284" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/panda.jpg" alt="" width="143" height="96" decoding="async"></li>
+    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/saudia.jpg" alt="" width="148" height="96" decoding="async"></li>
+  </ul></div>
+</section>
+
+<footer><div class="wrap">
+  <span>© خوشلي</span>
+</div></footer>
+</div>
+</body>
+</html>
