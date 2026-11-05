@@ -103,10 +103,14 @@
   /* sponsors marquee */
   .sponsors{position:relative;z-index:1;margin-top:18px;padding-block:16px 18px;background:var(--violet);overflow:hidden}
   .sp-title{margin:0 0 12px;text-align:center;font-size:14px;font-weight:700;color:var(--cream);padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
-  .sp-rail{overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-  .sp-track{display:flex;gap:12px;width:max-content;margin:0;padding:0;list-style:none;animation:spRun 60s linear infinite}
+  /* Two identical lists side by side, each at least as wide as the screen and each sliding
+     by exactly its own width plus the gap: the second takes the first's place, so the loop
+     has no seam and no empty stretch at any width. On screens wider than one set of logos,
+     the logos spread out to fill it. */
+  .sp-rail{display:flex;gap:12px;overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+  .sp-track{flex:none;display:flex;justify-content:space-around;gap:12px;min-width:100%;margin:0;padding:0;list-style:none;animation:spRun 60s linear infinite}
   .sponsors:hover .sp-track{animation-play-state:paused}
-  @keyframes spRun{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}
+  @keyframes spRun{from{transform:translateX(0)}to{transform:translateX(calc(-100% - 12px))}}
   .sp{flex:none;display:grid;place-items:center;height:44px;padding:0 12px;border-radius:12px;background:#fff}
   .sp img{display:block;height:28px;width:auto;max-width:96px;object-fit:contain}
 
@@ -187,24 +191,25 @@
     <li class="sp"><img src="assets/img/sponsors/lurpak.jpg" alt="Lurpak" width="284" height="96" decoding="async"></li>
     <li class="sp"><img src="assets/img/sponsors/panda.jpg" alt="بنده" width="143" height="96" decoding="async"></li>
     <li class="sp"><img src="assets/img/sponsors/saudia.jpg" alt="السعودية" width="148" height="96" decoding="async"></li>
-    <!-- second copy of the same logos: the marquee loops by sliding half its width -->
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/keeta.jpg" alt="" width="173" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/sun-cola.jpg" alt="" width="116" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/tania.jpg" alt="" width="94" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/midea.jpg" alt="" width="236" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/ninja.jpg" alt="" width="282" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/india-gate.jpg" alt="" width="74" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/hungerstation.jpg" alt="" width="188" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/careem.jpg" alt="" width="231" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/coffee-joy.jpg" alt="" width="132" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/eastern.jpg" alt="" width="141" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/foom.jpg" alt="" width="169" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/indomie.jpg" alt="" width="133" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/loacker.jpg" alt="" width="153" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/wow-pasta.jpg" alt="" width="99" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/lurpak.jpg" alt="" width="284" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/panda.jpg" alt="" width="143" height="96" decoding="async"></li>
-    <li class="sp" aria-hidden="true"><img src="assets/img/sponsors/saudia.jpg" alt="" width="148" height="96" decoding="async"></li>
+  </ul><ul class="sp-track" aria-hidden="true">
+    <!-- second copy of the same logos, for the seamless loop -->
+    <li class="sp"><img src="assets/img/sponsors/keeta.jpg" alt="" width="173" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/sun-cola.jpg" alt="" width="116" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/tania.jpg" alt="" width="94" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/midea.jpg" alt="" width="236" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/ninja.jpg" alt="" width="282" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/india-gate.jpg" alt="" width="74" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/hungerstation.jpg" alt="" width="188" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/careem.jpg" alt="" width="231" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/coffee-joy.jpg" alt="" width="132" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/eastern.jpg" alt="" width="141" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/foom.jpg" alt="" width="169" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/indomie.jpg" alt="" width="133" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/loacker.jpg" alt="" width="153" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/wow-pasta.jpg" alt="" width="99" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/lurpak.jpg" alt="" width="284" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/panda.jpg" alt="" width="143" height="96" decoding="async"></li>
+    <li class="sp"><img src="assets/img/sponsors/saudia.jpg" alt="" width="148" height="96" decoding="async"></li>
   </ul></div>
 </section>
 
