@@ -32,7 +32,7 @@ Keep every asset path **relative** in `index.html`. `404.html` uses
 
 ---
 
-## Status — 2026-11-04
+## Status — 2026-11-05
 
 **Done and verified**
 
@@ -50,6 +50,13 @@ Keep every asset path **relative** in `index.html`. `404.html` uses
   enforced. Live page byte-identical to the commit; http, `www` and
   `jelever.github.io/khoshly` 301 to https://khoshly.com/; missing paths
   404 with the custom page.
+- 2026-11-05: sizes scale with the screen. Every size is a multiple of
+  `--u` (1px on a 390px phone, following the screen width, capped by
+  height/700 and at 1.4px), with px floors on text; 404.html uses the same
+  unit. Write new sizes as `calc(var(--u) * N)`, not fixed px. Hover effects
+  only under `(hover:hover)`. Checked in Playwright Chromium and WebKit at 13
+  sizes (320px phone to 1920px desktop): 390px pixel-identical to before, no
+  truncation or horizontal overflow, marquee loop seamless.
 
 **Open work, in priority order**
 
@@ -59,6 +66,8 @@ Keep every asset path **relative** in `index.html`. `404.html` uses
    Add a domain; TXT `_github-pages-challenge-jelever` in Cloudflare).
 3. Check auto-renew for khoshly.com in Cloudflare (expires 2027-11-04), and
    add an uptime monitor.
+4. Look at the page on a real iPhone: Playwright's WebKit on Windows does not
+   show the notch area or Safari's toolbar.
 
 ---
 
