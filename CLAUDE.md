@@ -45,17 +45,20 @@ Keep every asset path **relative** in `index.html`. `404.html` uses
   60eb224). Live `index.html` byte-identical to the commit; fonts, logos,
   icons and og.png 200; missing paths 404 with the custom page; http 301 to
   https.
+- On khoshly.com since 2026-11-04 (e245b2f): DNS on Cloudflare, DNS only;
+  Let's Encrypt certificate for the apex and `www` to 2027-02-02; HTTPS
+  enforced. Live page byte-identical to the commit; http, `www` and
+  `jelever.github.io/khoshly` 301 to https://khoshly.com/; missing paths
+  404 with the custom page.
 
 **Open work, in priority order**
 
-1. khoshly.com: DNS records at Cloudflare (README → DNS), then push the
-   `CNAME` commit, check the domain in Settings → Pages, wait for the
-   certificate, tick *Enforce HTTPS*, smoke-test apex, `www` and the
-   github.io redirect.
-2. Verify the domain for the `jelever` account (TXT
-   `_github-pages-challenge-jelever`).
-3. Confirm the client may self-host Thmanyah Serif Display on a public site
+1. Confirm the client may self-host Thmanyah Serif Display on a public site
    (the font files are downloadable).
+2. Verify khoshly.com for the `jelever` account (GitHub → Settings → Pages →
+   Add a domain; TXT `_github-pages-challenge-jelever` in Cloudflare).
+3. Check auto-renew for khoshly.com in Cloudflare (expires 2027-11-04), and
+   add an uptime monitor.
 
 ---
 
